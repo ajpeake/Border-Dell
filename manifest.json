@@ -1,0 +1,29 @@
+{
+
+  "manifest_version": 2,
+  "name": "Border-Dell",
+  "version": "0.1",
+
+  "homepage_url": "http://github.com/ajpeake/Border-Dell.git",
+
+  "description": "Adds a solid green border to all webpages matching dell.com.",
+
+  "icons": {
+    "64": "dell-64.png"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "ajpeake@gmail.com",
+      "strict_min_version": "45.0"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.dell.com/*"],
+      "js": ["greenborder.js"]
+    }
+  ]
+
+}
